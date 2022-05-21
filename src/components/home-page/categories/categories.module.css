@@ -1,0 +1,212 @@
+.categories {
+  grid-template-rows: 15vh;
+  background: white;
+  overflow: hidden;
+  width: 100%;
+  display: grid;
+}
+
+/* Header */
+.categoriesHeader {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  margin-top: 10px;
+  z-index: 1;
+  background-color: white;
+}
+
+.categoriesHeader h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 50px;
+  letter-spacing: 5px;
+  text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Categories carousel */
+
+.col2 {
+  width: 100vw;
+  background: white;
+  z-index: 1;
+}
+
+.categoryContainer {
+  margin-top: 0px;
+  height: 72vh;
+  background-color: black;
+  cursor: pointer;
+}
+
+.categoryImg {
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+.categoryImg:hover {
+  opacity: 0.8;
+}
+
+.categoryName {
+  font-family: "Merriweather", serif;
+  text-transform: uppercase;
+  position: relative;
+  bottom: 200px;
+  margin: 0 auto;
+  width: 40vw;
+  padding: 15px;
+  opacity: 0.7;
+  text-align: center;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.7);
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.desc {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: -180px;
+  width: 100%;
+  padding: 60px;
+  background: #333333ca;
+  text-transform: uppercase;
+  transition: 0.3s linear;
+}
+
+.categoryContainer:hover .desc {
+  bottom: -80px;
+}
+
+.shopBtn {
+  font-size: 20px;
+  top: -50px;
+  margin: 0 auto;
+  padding: 12px 10px 10px 12px;
+  color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 30vw;
+  text-decoration: none;
+  text-shadow: 0px 1px 3px rgba(255, 255, 255, 0.8);
+  border: 3px solid #0d737a;
+  border-radius: 10px;
+  transition: opacity 0.3s;
+}
+
+.shopBtn:hover {
+  color: #0d737a;
+  opacity: 0.7;
+  background-color: #f9f9f9;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+@media (min-width: 1800px) {
+  .categoriesHeader h2 {
+    font-size: 65px;
+  }
+}
+
+@media (min-width: 1600px) and (max-width: 1900px) {
+  .categoryContainer {
+    height: 75vh;
+  }
+}
+
+@media only screen and (max-width: 1400px) and (min-height: 900px) and (orientation: landscape) {
+  .categories {
+    grid-template-rows: 10vh;
+  }
+
+  .categoryContainer {
+    height: 60vh;
+  }
+}
+
+@media only screen and (min-width: 900px) and (min-height: 1024px) and (orientation: portrait) {
+  .categories {
+    grid-template-rows: 8vh;
+  }
+
+  .categoryContainer {
+    height: 30vh;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .categoryContainer {
+    height: 58vh;
+  }
+
+  .categoryName {
+    bottom: 190px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .categoryName {
+    font-size: 16px;
+  }
+
+  .shopBtn {
+    font-size: 14px;
+  }
+
+  .desc {
+    bottom: -100px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .categoryContainer {
+    height: 50vh;
+  }
+
+  .categoriesHeader h2 {
+    margin-top: 0px;
+    font-size: 32px;
+  }
+
+  .categories {
+    grid-template-rows: 10vh;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .col2 {
+    margin: 0 10px;
+    width: 95vw;
+  }
+
+  .categories {
+    grid-template-rows: 9vh;
+  }
+
+  .categoriesHeader h2 {
+    font-size: 18px;
+  }
+
+  .shopBtn {
+    width: 40vw;
+  }
+
+  .categoryName {
+    width: 50vw;
+  }
+
+  .categoryContainer {
+    border-radius: 30px;
+    overflow: hidden;
+  }
+
+  .desc {
+    background: transparent;
+  }
+
+  .shopBtn {
+    width: 80vw;
+    background: #333333ca;
+  }
+}

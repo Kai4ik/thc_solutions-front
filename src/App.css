@@ -1,38 +1,143 @@
-.App {
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  text-rendering: optimizeLegibility;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Lato", "Arial", sans-serif;
+  overflow-x: hidden;
+}
+
+@media only screen and (min-width: 1600px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+.btn:link,
+.btn:visited,
+input[type="submit"] {
+  font-weight: 600;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 65%;
+  display: block;
+  margin: 14px auto;
+  text-decoration: none;
+  background-color: #108690;
   color: white;
+  padding: 12px 14px;
+  border-radius: 30px;
+  -webkit-transition: background-color 0.5s, font-size 0.5s;
+  transition: background-color 0.5s, font-size 0.5s;
 }
 
-.App-link {
-  color: #61dafb;
+.btn:hover,
+.btn:active,
+input[type="submit"]:hover {
+  background-color: #0d737a;
+  font-size: 102%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="submit"]:disabled {
+  background-color: white;
+  color: #108690;
+  border: 2px solid #108690;
+}
+input[type="submit"]:disabled:hover {
+  background-color: white;
+  font-size: 100%;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+#form-container {
+  position: relative;
+  width: 100%;
+  margin: 2vh auto;
+}
+
+.third {
+  float: left;
+  width: calc((100% - 32px) / 3);
+  padding: 0;
+  margin: 0 16px 16px 0;
+}
+
+.third:last-of-type {
+  margin-right: 0;
+}
+
+/* Define how SqPaymentForm iframes should look */
+.sq-input {
+  height: 56px;
+  box-sizing: border-box;
+  border: 1px solid #e0e2e3;
+  background-color: white;
+  border-radius: 6px;
+  display: inline-block;
+  -webkit-transition: border-color 0.2s ease-in-out;
+  -moz-transition: border-color 0.2s ease-in-out;
+  -ms-transition: border-color 0.2s ease-in-out;
+  transition: border-color 0.2s ease-in-out;
+}
+
+/* Define how SqPaymentForm iframes should look when they have focus */
+.sq-input--focus {
+  border: 1px solid #4a90e2;
+}
+
+/* Define how SqPaymentForm iframes should look when they contain invalid values */
+.sq-input--error {
+  border: 1px solid #e02f2f;
+}
+
+#sq-card-number {
+  margin-bottom: 16px;
+}
+
+/* Customize the "Pay with Credit Card" button */
+.button-credit-card {
+  width: 100%;
+  height: 56px;
+  margin-top: 10px;
+  background: #108690;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: block;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-align: center;
+  -webkit-transition: background 0.2s ease-in-out;
+  -moz-transition: background 0.2s ease-in-out;
+  -ms-transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
+}
+
+.button-credit-card:hover {
+  background-color: #4281cb;
+}
+
+.error {
+  float: left;
+  width: 100%;
+  margin: 16px 16px 16px 0;
+  border: 1px solid #e02f2f;
+  border-radius: 6px;
+  background-color: white;
+  font-size: "16px";
+  padding: 24px;
 }

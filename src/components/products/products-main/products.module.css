@@ -1,0 +1,172 @@
+.productsMain {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 31vw 69vw;
+  row-gap: 40px;
+}
+
+.container {
+  height: 420px;
+  width: 100%;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.showMore {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #f9f9f9;
+  background-color: #108690;
+  padding: 2px;
+  width: 150px;
+  height: 45px;
+  cursor: pointer;
+}
+
+.toTop {
+  font-size: 22px;
+  color: #f9f9f9;
+}
+
+.scrollBtn {
+  position: fixed;
+  right: 20px;
+  bottom: 40px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  cursor: pointer;
+}
+
+.filterPhone {
+  display: none;
+}
+
+@media only screen and (min-width: 2300px) {
+  .container {
+    width: 1450px;
+    height: 550px;
+  }
+
+  .showMore {
+    font-size: 27px;
+    width: 240px;
+    height: 70px;
+  }
+}
+
+@media only screen and (min-width: 1700px) and (max-width: 2300px) {
+  .container {
+    width: 1150px;
+    height: 480px;
+  }
+
+  .showMore {
+    font-size: 27px;
+    width: 240px;
+    height: 70px;
+  }
+}
+
+@media only screen and (max-width: 1320px) {
+  .productsMain {
+    grid-template-columns: 29vw 71vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .productsMain {
+    grid-template-columns: 100vw;
+    grid-template-rows: auto auto;
+    margin-bottom: 30px;
+  }
+
+  .products {
+    grid-row: 3/4;
+  }
+
+  .container {
+    width: 100vw;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .productsMain {
+    row-gap: 5px;
+  }
+
+  .container {
+    justify-content: space-evenly;
+  }
+
+  .bottomBtn {
+    display: flex;
+  }
+
+  .scrollBtn {
+    position: relative;
+    height: 45px;
+    width: 45px;
+    left: 10px;
+    bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .container {
+    margin-bottom: 10px;
+    height: 370px;
+  }
+
+  .showMore {
+    margin-top: 20px;
+  }
+
+  .bottomBtn {
+    display: flex;
+  }
+
+  .scrollBtn {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .filterPhone {
+    display: block;
+  }
+
+  .productsMain {
+    grid-template-rows: auto auto;
+  }
+
+  .container {
+    height: 280px;
+  }
+
+  .toTop {
+    font-size: 18px;
+  }
+
+  .showMore {
+    width: 120px;
+    height: 35px;
+  }
+
+  .scrollBtn {
+    height: 35px;
+    width: 35px;
+  }
+}

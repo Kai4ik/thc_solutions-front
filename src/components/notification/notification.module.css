@@ -1,0 +1,82 @@
+/* Notification styles */
+
+.notification {
+  position: fixed;
+  width: 100vw;
+  overflow: hidden;
+  background: #fccf14;
+  z-index: 5;
+  display: none;
+  transition: 0.3s linear;
+}
+
+.center {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  height: 80px;
+}
+
+.center h1 {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  font-size: 20px;
+  margin: 0;
+  margin-right: 40px;
+  line-height: 80px;
+}
+
+.closeBtn {
+  font-size: 22px;
+  margin-top: 29px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1024px) {
+  .center {
+    height: 70px;
+  }
+
+  .center h1 {
+    line-height: 70px;
+  }
+
+  .closeBtn {
+    font-size: 18px;
+    margin-top: 26px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .center h1 {
+    font-size: 18px;
+  }
+
+  .closeBtn {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .center {
+    height: auto;
+    min-height: 100px;
+    width: 70%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .center h1 {
+    font-size: 14px;
+    line-height: 25px;
+    margin-right: 15px;
+  }
+
+  .closeBtn {
+    font-size: 14px;
+    margin-top: 0px;
+  }
+}

@@ -1,0 +1,31 @@
+.loadingText {
+  position: relative;
+  font-size: 2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+  line-height: 1.2em;
+  letter-spacing: 0.05em;
+  border-bottom: 13px solid white;
+}
+
+.loadingText::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #108690;
+  overflow: hidden;
+  border-bottom: 13px solid #108690;
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}

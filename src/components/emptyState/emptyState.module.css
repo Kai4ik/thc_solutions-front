@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  margin: 10px 90px;
+  box-shadow: 2px 2px 4px #c1c0c0, -2px -2px 4px #c1c0c0;
+}
+
+.cartIcon {
+  font-size: 70px;
+  color: #e8e9eb;
+}
+
+.container p {
+  font-size: 18px;
+  color: rgba(112, 112, 112, 0.959);
+  font-family: "Poppins", sans-serif;
+  margin-top: 30px;
+}
+
+.container button {
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #f9f9f9;
+  background-color: #108690;
+  padding: 2px;
+  width: 150px;
+  height: 45px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    margin: 10px 20px;
+    margin-bottom: 50px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .cartIcon {
+    font-size: 140px;
+  }
+
+  .container p {
+    font-size: 16px;
+    text-align: center;
+  }
+}

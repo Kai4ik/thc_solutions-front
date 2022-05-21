@@ -1,0 +1,58 @@
+/* Shipping fields */
+
+.fieldSet {
+  margin-top: 35px;
+  margin-bottom: 20px;
+  color: #999898;
+  font-weight: 500;
+}
+
+.street,
+.city,
+.state {
+  width: 100%;
+  height: 100%;
+  font-size: 80%;
+  padding-top: 40px;
+  outline: none;
+  border: 1px solid #e0e2e3;
+  border-radius: 6px;
+  height: 56px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.street::placeholder,
+.city::placeholder,
+.state::placeholder {
+  color: #999898;
+}
+
+.city,
+.state {
+  display: inline;
+  width: 48%;
+}
+
+.state {
+  margin-left: 4%;
+}
+
+.form input[type="tel"] {
+  height: 56px !important;
+  width: 100% !important;
+  border: 1px solid #e0e2e3 !important;
+  font-size: 16px !important;
+}
+
+.invisible {
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+  .street::placeholder,
+  .city::placeholder,
+  .state::placeholder {
+    font-size: 12px;
+  }
+}

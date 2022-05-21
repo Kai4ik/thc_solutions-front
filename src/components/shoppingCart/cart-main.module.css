@@ -1,0 +1,324 @@
+.cartMain {
+  width: 100%;
+  min-height: 40vh;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  margin-bottom: 88px;
+}
+
+.shoppingBagHeader {
+  background-image: url("../../images/water-soluble-cbd-removebg-preview.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-color: #faf4f4;
+  height: 240px;
+  width: 100vw;
+  padding-top: 100px;
+  padding-left: 90px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.shoppingBagHeader h3 {
+  font-size: 40px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.shoppingBagHeader p {
+  font-size: 24px;
+  color: rgba(112, 112, 112, 0.959);
+  font-family: "Roboto Mono", monospace;
+}
+
+/* Products */
+
+.container {
+  margin: 0 2% 1% 8%;
+  color: black;
+}
+
+.container h1 {
+  padding: 20px 0;
+}
+
+/* Right side of page - order summary styles */
+
+.orderSummary {
+  margin: 0px 15% 0 8%;
+  height: 40%;
+}
+
+.orderSummary h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.productRow,
+.formField {
+  display: none;
+}
+
+.cartProduct {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.cartProductName,
+.cartProductPrice,
+.cartProductQty,
+.cartProductTotal {
+  width: 17%;
+  text-align: right;
+  padding-top: 0;
+  font-size: 70%;
+  font-weight: 500;
+}
+
+.cartProductName {
+  width: 50%;
+  text-align: left;
+}
+
+.inputQty {
+  height: 18px;
+  width: 70%;
+  padding: 0 2px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.inputQty::-webkit-inner-spin-button,
+.inputQty::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+@media only screen and (min-width: 2300px) {
+  .cartProductName,
+  .cartProductPrice,
+  .cartProductQty,
+  .cartProductTotal {
+    font-size: 24px;
+  }
+
+  .inputQty {
+    width: 60%;
+    height: 24px;
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 1620px) {
+  .shoppingBagHeader {
+    height: 200px;
+    padding-top: 80px;
+  }
+
+  .cartMain {
+    min-height: 55vh;
+    margin-bottom: 0px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .shoppingBagHeader {
+    padding-top: 30px;
+    padding-left: 30px;
+  }
+
+  .container {
+    margin: 0 0 1% 3%;
+  }
+
+  .cartMain {
+    min-height: 60vh;
+    grid-template-columns: 60% 40%;
+  }
+
+  .cartProductName {
+    width: 70%;
+    font-size: 14px;
+  }
+
+  .cartProductTotal {
+    width: 30%;
+    font-size: 14px;
+  }
+
+  .cartProductPrice,
+  .cartProductQty {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .shoppingBagHeader {
+    padding-left: 20px;
+    height: 230px;
+  }
+
+  .shoppingBagHeader h3 {
+    font-size: 32px;
+    width: 40%;
+  }
+
+  .shoppingBagHeader p {
+    padding-top: 15px;
+  }
+
+  .cartMain {
+    grid-template-columns: 100vw !important;
+    margin-bottom: 20px;
+  }
+
+  .container {
+    margin: 0 auto;
+    width: 90vw;
+  }
+
+  .orderSummary {
+    margin: 40px 40px;
+  }
+
+  .cartProduct {
+    align-items: center;
+  }
+
+  .cartProductName {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    width: 40%;
+  }
+
+  .cartProductPrice,
+  .cartProductQty,
+  .cartProductTotal {
+    display: inline-block;
+    font-size: 16px;
+    width: 20%;
+    text-align: right;
+  }
+
+  .inputQty {
+    width: 70px;
+    margin-bottom: 3px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .shoppingBagHeader {
+    padding: 20px 0 0 15px;
+    align-items: flex-start;
+    background-color: #e3e1e4;
+    background-position-x: 10px;
+  }
+
+  .shoppingBagHeader h3 {
+    font-size: 30px;
+    width: 50%;
+    padding-right: 10px;
+  }
+
+  .shoppingBagHeader p {
+    width: 80%;
+    padding-top: 20px;
+  }
+
+  .cartProduct {
+    align-items: unset;
+  }
+
+  .cartProductName {
+    font-size: 65%;
+    width: 46%;
+  }
+
+  .cartProductPrice,
+  .cartProductQty,
+  .cartProductTotal {
+    width: 18%;
+    font-size: 75%;
+  }
+
+  .inputQty {
+    width: 50px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .shoppingBagHeader h3 {
+    font-size: 25px !important;
+    width: 57%;
+  }
+
+  .container {
+    width: 85vw;
+    flex-direction: column;
+    align-items: center !important;
+  }
+
+  .product {
+    flex-direction: column;
+    height: 340px;
+    margin-bottom: 40px;
+  }
+
+  .imgWrapper {
+    display: flex;
+    min-height: 220px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 !important;
+    padding: auto;
+  }
+
+  .product img {
+    max-width: 60% !important;
+  }
+
+  .productInfo {
+    min-height: 120px;
+    margin-left: 0;
+  }
+
+  .productName {
+    width: 60%;
+  }
+
+  .productPrice {
+    position: absolute;
+    top: -200px;
+  }
+
+  .productQty {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+
+  .orderSummary {
+    margin: 40px 20px;
+  }
+
+  .cartProductName {
+    width: 70%;
+    font-size: 14px;
+  }
+
+  .cartProductTotal {
+    width: 30%;
+    font-size: 14px;
+  }
+
+  .cartProductPrice,
+  .cartProductQty {
+    display: none;
+  }
+}

@@ -1,0 +1,368 @@
+.signUp {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 67% 33%;
+  height: 100vh;
+}
+
+.signUpLeft {
+  margin-right: 8px;
+  border-right: 10px solid #fccf14;
+  background-image: url(../../images//signinBackground.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  background-color: #ededed;
+  background-position-x: 20px;
+}
+
+.signUp h2 {
+  text-align: center;
+  border: none;
+  padding: none;
+  margin: 100px 0 15px 0;
+}
+
+/* Right side of registration page*/
+
+.signUpForm {
+  width: 70%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.signUpForm p {
+  font-size: 85%;
+  text-align: center;
+}
+
+/* Form fields - email, password and submit button*/
+
+.signUpForm input {
+  width: 100%;
+  height: 100%;
+  font-size: 80%;
+  padding-top: 40px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+input:focus + .labelName .content,
+input:valid + .labelName .content {
+  transform: translateY(-150%);
+  font-size: 70%;
+}
+
+input:focus + .labelName::after,
+input:valid + .labelName::after {
+  transform: translateX(0%);
+}
+
+input[type="submit"] {
+  width: 45%;
+  margin-top: 42%;
+  padding: 2vh 0;
+  border-radius: 12px;
+  font-size: 100%;
+  cursor: pointer;
+  background-color: #108690;
+}
+
+input[type="password"] {
+  margin-bottom: 8%;
+}
+
+.passwordRegExp {
+  width: 50%;
+  display: inline-block;
+  margin: 4px 0;
+  font-size: 65%;
+}
+
+.passwordRegExp::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 6px;
+  border-radius: 8px;
+  background-color: #ed1414;
+}
+
+.warning {
+  color: #ed1414;
+  font-size: 70%;
+  margin-top: 10px;
+  display: none !important;
+}
+
+label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  bottom: 0px;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+}
+
+label::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-bottom: 3px solid #108690;
+  left: 0px;
+  transition: all 0.3s ease;
+  transform: translateX(-100%);
+  bottom: -1px;
+}
+
+.content {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+
+.nav {
+  color: #108690;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.field {
+  position: relative;
+  height: 65px;
+}
+
+@media only screen and (min-width: 1800px) {
+  .signUpForm {
+    margin: auto;
+  }
+
+  .passwordRegExp {
+    font-size: 85%;
+  }
+
+  .passwordRegExp::before {
+    width: 10px;
+    height: 10px;
+    margin-bottom: 2px;
+  }
+
+  .warning {
+    font-size: 90%;
+  }
+
+  .rightExp {
+    padding-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .passwordRegExp {
+    width: 48%;
+    margin-right: 6px;
+  }
+
+  .rightExp {
+    padding-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .signUp {
+    grid-template-columns: 65% 35%;
+  }
+
+  .passwordRegExp {
+    width: 50%;
+    margin-right: 0px;
+  }
+
+  .rightExp {
+    padding-left: 25px;
+  }
+
+  input[type="submit"] {
+    margin-top: 48%;
+  }
+}
+
+@media only screen and (max-width: 1270px) {
+  .signUp {
+    grid-template-columns: 100%;
+    height: auto;
+    background-image: url(../../images/f383ee4a8941896c2efaadfef75bfad6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-x: 0px;
+  }
+
+  .signUpForm p {
+    padding-top: 1vh;
+    padding-bottom: 7vh;
+  }
+
+  .signUp h2 {
+    margin: 20px 0px 10px 10px;
+  }
+
+  .passwordRegExp {
+    width: 50%;
+  }
+
+  .signUpForm form {
+    width: 35vw;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .signUpLeft {
+    display: none;
+  }
+
+  input[type="submit"] {
+    margin-top: 35%;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .signUpForm form {
+    width: 42vw;
+  }
+
+  .signUp h2 {
+    margin: 40px 0px 10px 10px;
+  }
+
+  input[type="submit"] {
+    margin-top: 32%;
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  input[type="submit"] {
+    margin-top: 35%;
+  }
+
+  .passwordRegExp {
+    width: 40%;
+  }
+
+  .rightExp {
+    padding-left: 40px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .signUpForm {
+    width: 100vw;
+    backdrop-filter: blur(12px);
+  }
+
+  .signUpForm form {
+    width: 48vw;
+  }
+
+  .passwordRegExp {
+    width: 50%;
+  }
+
+  .rightExp {
+    padding-left: 0px;
+  }
+
+  input[type="submit"] {
+    margin-top: 40%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .signUp h2 {
+    margin: 70px 0px 10px 10px;
+  }
+
+  .signUpForm form {
+    width: 50vw;
+  }
+
+  input[type="submit"] {
+    width: 85%;
+    margin-top: 40%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .signUpForm form {
+    width: 62vw;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .signUpForm form {
+    width: 70vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .signUpForm form {
+    width: 80vw;
+  }
+
+  input[type="submit"] {
+    margin-top: 45%;
+    width: 85%;
+  }
+
+  .signUp {
+    background-image: url(../../images/agave-close-up-desktop-backgrounds-wallpaper.jpg);
+  }
+
+  .passwordRegExp {
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .signUpForm p {
+    text-shadow: 2px 4px 5px white;
+    font-weight: 700;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  input[type="submit"] {
+    margin-top: 60%;
+  }
+
+  .rightExp {
+    padding-left: 0px;
+  }
+
+  .passwordRegExp {
+    width: 80%;
+  }
+
+  .signUp h2 {
+    margin: 60px 0px 10px 10px;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  input[type="submit"] {
+    margin-top: 70%;
+  }
+
+  .field {
+    height: 60px;
+  }
+
+  .signUpForm p {
+    margin-top: 1vh;
+  }
+}

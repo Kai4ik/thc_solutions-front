@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+header {
+  height: 102vh;
+  position: relative;
+}
+
+.headerMain,
+.headerMain2,
+.headerMain3,
+.headerMain4 {
+  width: 100%;
+  display: grid;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.47), rgba(0, 0, 0, 0.47)),
+    url(../../../images/background3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-template-columns: 100vw;
+  grid-template-rows: 92vh;
+  background-color: #ebebeb;
+  z-index: 3;
+}
+
+.headerMain2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.47), rgba(0, 0, 0, 0.57)),
+    url(../../../images/background1.png);
+}
+
+.headerMain3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.47), rgba(0, 0, 0, 0.57)),
+    url(../../../images/background2.png);
+}
+
+.headerMain4 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.47), rgba(0, 0, 0, 0.47)),
+    url(../../../images/category4.jpg);
+}
+
+.svg {
+  position: absolute;
+  bottom: 0px;
+  transform: scaleY(0.75);
+  z-index: 3;
+}
+
+.hero {
+  width: 100%;
+  justify-self: center;
+  align-self: flex-end;
+  margin-bottom: 20vh;
+  padding: 30px;
+  line-height: 40px;
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  opacity: 1;
+}
+
+.hero p {
+  width: 60%;
+  margin: 0 20%;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 4vh;
+  font-weight: 600;
+  font-size: 62px;
+  text-transform: uppercase;
+  text-shadow: 2px 8px 3px rgba(0, 0, 0, 0.7);
+}
+
+.hero .btn {
+  width: 45%;
+  margin: 15px 0 0 3px;
+  opacity: 1;
+  border-radius: 10px;
+  transition: font-size 0.5s;
+}
+
+.hero .btn:hover {
+  font-size: 104%;
+}
+
+/* Notification styles */
+
+.notification {
+  position: fixed;
+  width: 100vw;
+  overflow: hidden;
+  background: #fccf14;
+  z-index: 5;
+  transition: 0.3s linear;
+  animation: notification 8s ease-in-out forwards;
+}
+
+.center {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 80px;
+}
+
+.center h1 {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  font-size: 20px;
+  margin: 0;
+  margin-right: 40px;
+  line-height: 80px;
+}
+
+@keyframes notification {
+  0% {
+    opacity: 1;
+    z-index: 5;
+  }
+
+  100% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .hero {
+    margin-bottom: 25vh;
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  .title {
+    font-size: 80px;
+  }
+
+  .svg {
+    bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 1450px) {
+  .title {
+    line-height: 70px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .hero {
+    margin-bottom: 15vh;
+    font-size: 20px;
+  }
+
+  .title {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  header {
+    height: 98vh;
+  }
+
+  .hero {
+    margin-bottom: 27vh;
+    line-height: 30px;
+  }
+
+  .hero p {
+    width: 70%;
+    margin: 0 15%;
+  }
+
+  .title {
+    font-size: 45px;
+  }
+
+  .center {
+    height: 70px;
+  }
+
+  .center h1 {
+    line-height: 70px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .hero {
+    font-size: 18px;
+    line-height: 35px;
+    margin-bottom: 16vh;
+  }
+
+  .title {
+    font-size: 38px;
+  }
+}
+
+@media only screen and (max-width: 768px) and (max-height: 1000px) {
+  .title {
+    font-size: 32px;
+  }
+
+  .hero p {
+    width: 90%;
+    margin: 0 5%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  header {
+    height: 90vh;
+  }
+
+  .headerMain,
+  .headerMain2,
+  .headerMain3,
+  .headerMain4 {
+    grid-template-rows: 85vh;
+  }
+
+  .title {
+    line-height: 50px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  header {
+    height: 68vh;
+  }
+
+  .headerMain,
+  .headerMain2,
+  .headerMain3,
+  .headerMain4 {
+    grid-template-rows: 66vh;
+  }
+
+  .headerMain {
+    background-position-x: center;
+  }
+
+  .title {
+    font-size: 25px;
+    line-height: 40px;
+  }
+
+  .hero {
+    font-size: 14px;
+    line-height: 25px;
+    margin-bottom: 10vh;
+  }
+
+  .hero p {
+    width: 100%;
+    margin: 0;
+  }
+
+  .center {
+    width: 70%;
+    text-align: center;
+  }
+
+  .center h1 {
+    font-size: 14px;
+    line-height: 20px;
+    margin-right: 0px;
+  }
+}
+
+/*Styles for iPad */
+@media only screen and (max-width: 800px) and (min-height: 950px) {
+  header {
+    height: 68vh;
+  }
+
+  .headerMain,
+  .headerMain2,
+  .headerMain3,
+  .headerMain4 {
+    grid-template-rows: 65vh;
+  }
+
+  .title {
+    font-size: 50px;
+  }
+
+  .hero {
+    font-size: 20px;
+    line-height: 40px;
+  }
+
+  .hero p {
+    width: 90%;
+    margin: 0 5%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-height: 768px) and (orientation: landscape) {
+  .hero {
+    font-size: 28px;
+    line-height: 50px;
+  }
+
+  .hero p {
+    width: 90%;
+    margin: 0 5%;
+  }
+
+  .title {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-height: 1366px) {
+  header {
+    height: 60vh;
+  }
+
+  .headerMain,
+  .headerMain2,
+  .headerMain3,
+  .headerMain4 {
+    grid-template-rows: 57vh;
+  }
+
+  .title {
+    font-size: 50px;
+  }
+
+  .hero {
+    font-size: 26px;
+    line-height: 40px;
+    margin-bottom: 18vh;
+  }
+
+  .hero p {
+    width: 70%;
+    margin: 0 15%;
+  }
+}

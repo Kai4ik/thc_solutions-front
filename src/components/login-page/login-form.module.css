@@ -1,0 +1,411 @@
+.login {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 35% 65%;
+  grid-template-rows: 100vh;
+  background-image: url(../../images/loginBackground.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right top;
+}
+
+.login h2 {
+  border: none;
+  padding: none;
+  margin: 170px 0 15px 0;
+  text-align: left;
+}
+
+.details {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #a0a3a5;
+}
+
+/* Left side of login page*/
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  margin: 0 15%;
+  overflow: hidden;
+}
+
+.signUp {
+  margin-top: 3vh;
+  font-size: 75%;
+  text-align: center;
+}
+
+.loginForm h2 {
+  margin-bottom: 50px;
+}
+
+.loginForm .rights {
+  position: absolute;
+  left: 70px;
+  bottom: 8px;
+  font-size: 65%;
+  color: #676464;
+}
+
+/* Form fields - email, password and submit button*/
+
+.loginForm input {
+  width: 100%;
+  height: 100%;
+  font-size: 80%;
+  padding-top: 40px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+input:focus + .labelName .content,
+input:valid + .labelName .content {
+  transform: translateY(-150%);
+  font-size: 70%;
+}
+
+input:focus + .labelName::after,
+input:valid + .labelName::after {
+  transform: translateX(0%);
+}
+
+.warning {
+  color: #ed1414;
+  font-size: 70%;
+  margin-top: 10px;
+  display: none !important;
+}
+
+.warning1 {
+  color: #ed1414;
+  font-size: 70%;
+  margin-top: 10px;
+  display: block !important;
+}
+
+label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  bottom: 0px;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+}
+
+label::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-bottom: 3px solid #108690;
+  left: 0px;
+  transition: all 0.3s ease;
+  transform: translateX(-100%);
+  bottom: -1px;
+}
+
+.content {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+
+.nav {
+  color: #108690;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.field {
+  position: relative;
+  height: 70px;
+}
+
+/* Submit button styles */
+
+.submitBtn {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  margin-top: 14%;
+  outline: none;
+  background: none;
+  padding: 2vh 0 1vh 2.5px;
+  width: 45%;
+  border: none;
+  font-size: 110%;
+  border-radius: 12px;
+  color: #108690;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.submitBtn:hover {
+  color: #f9f9f9;
+}
+
+.submitBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: #ed2553;
+  opacity: 0.9;
+  border-radius: 12px;
+  transition: transform 0.5s;
+  transform-origin: bottom right;
+  transform: scale(0);
+}
+
+.submitBtn:enabled::before {
+  background: #108690;
+}
+
+.submitBtn:hover::before {
+  transition: transform 0.5s;
+  transform-origin: top left;
+  transform: scale(1);
+}
+
+.submitBtn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: transparent;
+  border-radius: 12px;
+  border: 2px solid #108690;
+  transition: transform 0.5s;
+  transform-origin: top left;
+  transform: scale(1);
+}
+
+.submitBtn:hover::after {
+  transition: transform 0.5s;
+  transform-origin: bottom right;
+  transform: scale(0);
+}
+
+/* Notification styles */
+
+.notification {
+  position: fixed;
+  width: 100vw;
+  overflow: hidden;
+  background: #fccf14;
+  z-index: 5;
+  animation: notification 4s 1 forwards;
+  animation-delay: 2s;
+}
+
+.center {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 80px;
+}
+
+.center h1 {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  font-size: 20px;
+  margin: 0;
+  line-height: 80px;
+  text-align: center;
+}
+
+@keyframes notification {
+  0% {
+    opacity: 1;
+    z-index: 5;
+  }
+
+  100% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .loginForm .rights {
+    left: 6vw;
+    bottom: 25px;
+  }
+}
+
+@media only screen and (max-width: 1480px) {
+  .loginForm h2 {
+    margin-bottom: 15px;
+  }
+
+  .loginForm {
+    width: 70%;
+    margin: 0 15%;
+  }
+
+  .loginForm p {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .login {
+    grid-template-columns: 100%;
+    background-position: center;
+  }
+
+  .loginForm h2 {
+    margin-bottom: 15px;
+    text-align: center;
+    margin-top: 0;
+    font-size: 40px;
+    text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
+  }
+
+  .details {
+    text-shadow: none;
+    font-size: 25px;
+  }
+
+  .loginForm {
+    width: 100vw;
+    height: auto;
+    margin: 0vh;
+    padding-top: 100px;
+    backdrop-filter: blur(6px);
+  }
+
+  .loginForm .rights {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .field {
+    width: 40vw;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .warning1 {
+    width: 40vw;
+    margin: 0 auto;
+    margin-top: 10px;
+    overflow: hidden;
+  }
+
+  .submitBtn {
+    margin-top: 6vh;
+    width: 35vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .field {
+    width: 50vw;
+  }
+
+  .warning1 {
+    width: 50vw;
+  }
+
+  .loginForm h2 {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .field {
+    width: 56vw;
+  }
+
+  .warning1 {
+    width: 56vw;
+  }
+
+  .loginForm h2 {
+    font-size: 38px;
+  }
+
+  .submitBtn {
+    width: 55vw;
+  }
+
+  .details {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .field {
+    width: 70vw;
+  }
+
+  .warning1 {
+    width: 70vw;
+  }
+
+  .loginForm h2 {
+    font-size: 38px;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .field {
+    width: 80vw;
+  }
+
+  .warning1 {
+    width: 80vw;
+  }
+
+  .submitBtn {
+    width: 75vw;
+  }
+
+  .loginForm {
+    padding-top: 160px;
+  }
+
+  .loginForm h2 {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 35px;
+  }
+
+  .loginForm:focus-within .rights {
+    opacity: 0;
+  }
+
+  .center {
+    width: 70%;
+    text-align: center;
+  }
+
+  .center h1 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

@@ -1,0 +1,178 @@
+/* Shopping cart and wishlist icons*/
+.shopIcons {
+  display: inline-block;
+  position: absolute;
+  left: 60%;
+  bottom: 180px;
+  font-size: 14px;
+  width: 45px;
+  height: 45px;
+  margin-right: 12px;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 50%;
+  box-shadow: -2px -2px 8px white, -2px -2px 12px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.1), 2px 2px 8px rgba(0, 0, 0, 0.15);
+  transition: 0.4s;
+  overflow: hidden;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.shopIcons:hover {
+  box-shadow: inset -2px -2px 8px white,
+    inset -2px -2px 12px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+    inset 2px 2px 8px rgba(0, 0, 0, 0.15);
+  color: red;
+}
+
+.card:hover .shopIcons {
+  left: 110px;
+}
+
+#wishlist {
+  left: 80%;
+  bottom: 180px;
+}
+
+.inWishlist {
+  color: red;
+}
+
+/*-------------------*/
+
+.shopIcons:hover {
+  box-shadow: inset -2px -2px 8px white,
+    inset -2px -2px 12px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+    inset 2px 2px 8px rgba(0, 0, 0, 0.15);
+  color: red;
+}
+
+#shopCart:hover {
+  color: #0d737a;
+}
+
+#addedToCart {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 12px;
+  right: 60px;
+  transition: 2s;
+}
+
+.added #addedToCart {
+  animation: addedToCart linear forwards;
+  animation-duration: 2s;
+}
+
+#cartAnimation {
+  position: absolute;
+  top: 16px;
+  left: 13px;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.added #cartAnimation {
+  animation: cart 1.5s ease-in-out forwards;
+}
+
+@keyframes cart {
+  0% {
+    left: 13px;
+  }
+  100% {
+    left: 60px;
+  }
+}
+
+@keyframes addedToCart {
+  0% {
+    right: 60px;
+  }
+  100% {
+    right: 0px;
+    left: 12px;
+  }
+}
+
+.inCartProduct {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 12px;
+  right: 0px;
+  left: 12px;
+  transition: 0.8s;
+}
+
+@media only screen and (min-width: 2300px) {
+  .shopIcons {
+    left: 68% !important;
+    bottom: 230px;
+  }
+
+  #wishlist {
+    left: 83% !important;
+    bottom: 230px;
+  }
+}
+
+@media only screen and (min-width: 1700px) and (max-width: 2300px) {
+  .shopIcons {
+    left: 63% !important;
+    bottom: 210px;
+  }
+
+  #wishlist {
+    left: 80% !important;
+    bottom: 210px;
+  }
+}
+
+@media only screen and (max-width: 1480px) {
+  .shopIcons {
+    left: 55% !important;
+  }
+
+  #wishlist {
+    left: 75% !important;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .shopIcons {
+    left: 58% !important;
+  }
+
+  #wishlist {
+    left: 78% !important;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .shopIcons {
+    left: 62% !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .shopIcons {
+    left: 60% !important;
+    bottom: 170px;
+  }
+
+  #wishlist {
+    bottom: 170px;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  #shopCart,
+  #wishlist {
+    display: none;
+  }
+}

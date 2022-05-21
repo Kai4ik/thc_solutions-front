@@ -1,0 +1,214 @@
+/* Filter options - category, price */
+
+.filterSection {
+  position: relative;
+  margin: 30px 90px;
+}
+
+.filterWrapper {
+  position: sticky;
+  display: block;
+  top: 90px;
+  z-index: 1;
+}
+
+.filterOptions {
+  padding-bottom: 1vh;
+  margin-bottom: 3vh;
+  border-bottom: 1.5px solid #d9d9d9;
+}
+
+.filterOption {
+  display: inline-block;
+  min-width: 14vw;
+  font-size: 120%;
+  color: #3c3b37;
+  font-weight: 600;
+  margin-bottom: 12px;
+  user-select: none;
+}
+
+/* Arrow icons */
+
+.scrollDown {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrowUp,
+.arrowDown {
+  margin-top: 4px;
+  align-self: flex-start;
+  user-select: none;
+}
+
+.arrowDown {
+  display: none;
+}
+
+/* Filter options */
+
+.options {
+  display: none;
+}
+
+.options li {
+  font-size: 18px;
+  list-style: none;
+  user-select: none;
+  text-transform: capitalize;
+  padding-top: 10px;
+  width: 100%;
+  min-height: 40px;
+}
+
+.options li:hover {
+  background-color: #e7e7e7;
+}
+
+.option {
+  display: flex;
+  align-items: flex-end;
+  padding-left: 5px !important;
+}
+
+.option p {
+  margin-left: 10px;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+/* When category and/or it's subcategory is active */
+
+.active {
+  background-color: #fccf14;
+}
+
+.activeSubcategory {
+  color: #fccf14;
+  font-weight: 700;
+}
+
+/* For options that have subcategories and subcategories itself*/
+
+.subcategories .filterOption {
+  font-size: 18px;
+  padding: 2px 0px 8px 5px;
+  font-weight: 500;
+  color: black;
+  margin: 0;
+}
+
+.subcategories .arrowUp,
+.subcategories .arrowDown {
+  margin-top: 0px;
+}
+
+.subcategoryOptions {
+  display: flex;
+  align-items: flex-end;
+  background-color: white;
+  padding: 10px;
+  padding-left: 35px !important;
+}
+
+.subcategoryOptions p {
+  margin-left: 10px;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.price {
+  width: 92% !important;
+  margin: 0 10px;
+}
+
+.priceRange {
+  font-size: 18px;
+  margin-top: 6px;
+}
+
+@media only screen and (min-width: 1800px) {
+  .filterSection {
+    margin-left: 60px;
+  }
+
+  .filterOption {
+    font-size: 150%;
+  }
+
+  .arrowUp,
+  .arrowDown {
+    margin-top: 15px;
+  }
+
+  .options li {
+    font-size: 28px;
+  }
+
+  .subcategories .filterOption {
+    font-size: 28px;
+  }
+
+  .priceRange {
+    font-size: 32px;
+  }
+}
+
+@media only screen and (max-width: 1320px) {
+  .filterSection {
+    margin: 30px 40px;
+    margin-bottom: 0px;
+  }
+
+  .arrowUp,
+  .arrowDown {
+    margin-top: 12px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .filterSection {
+    grid-column: 1/2;
+    margin: 10px 5vw 30px 5vw;
+  }
+
+  .scrollDown p {
+    padding-top: 10px;
+    margin-bottom: 4px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .filterSection {
+    margin: 30px 5vw 30px 5vw;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .filterSection {
+    margin: 30px 5vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .filterSection {
+    margin: 0px 5vw 30px 5vw;
+  }
+
+  .filterOptions {
+    padding-bottom: 1vh;
+    margin-bottom: 2vh;
+  }
+
+  .filterOption {
+    font-size: 100%;
+    margin-bottom: 1vh;
+  }
+
+  .arrowUp,
+  .arrowDown {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,136 @@
+.buttons {
+  display: flex;
+}
+
+.addBtn,
+.addedToCart {
+  width: 50vw;
+  height: 60px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  margin-right: 30px;
+  border: 2px solid black;
+  color: black;
+  background-color: #ffd52cde;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s;
+  pointer-events: all;
+}
+
+.addBtn p {
+  pointer-events: none;
+}
+
+#wishlistBtn {
+  border: 2px solid black !important;
+  background-color: #f9f9f9 !important;
+}
+
+.wishlistIcon,
+.inWishlist {
+  display: none;
+}
+
+.cartIcon,
+.heartIcon {
+  margin-left: 20px;
+}
+
+/* Check icon styles */
+
+.check {
+  color: #108690;
+  margin-right: 16px;
+  height: 20px;
+}
+
+.added {
+  color: #108690;
+}
+
+@media only screen and (min-width: 1600px) {
+  .addBtn {
+    font-size: 22px;
+    height: 80px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .addBtn {
+    margin-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .buttons {
+    justify-content: center;
+  }
+
+  .addBtn {
+    font-size: 14px;
+    margin-right: 15px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .addBtn,
+  .addedToCart {
+    font-size: 20px;
+    width: 60vw;
+    height: 60px;
+    border: none;
+    border-radius: 14px;
+    outline: none;
+    margin-right: 0px;
+    margin-bottom: 15px;
+    color: #444242;
+    box-shadow: inset -2px -2px 8px rgb(218, 218, 218), inset 2px 2px 8px white,
+      inset -2px -2px 12px rgba(255, 255, 255, 0.5),
+      inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+      inset 2px 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .addedToCart {
+    background-color: #eceff1;
+  }
+
+  .addToWishlist {
+    display: none;
+  }
+
+  .wishlistIcon,
+  .inWishlist {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    background-color: #ffd52cde;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 14px;
+    margin-right: 20px;
+    box-shadow: inset -2px -2px 8px rgb(218, 218, 218), inset 2px 2px 8px white,
+      inset -2px -2px 12px rgba(255, 255, 255, 0.5),
+      inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+      inset 2px 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .inWishlist {
+    background-color: #eceff1;
+  }
+
+  .likeIcon,
+  .likeIconActive {
+    color: #444242;
+    font-size: 26px;
+  }
+
+  .likeIconActive {
+    color: rgb(238, 62, 62);
+  }
+}

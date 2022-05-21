@@ -1,0 +1,442 @@
+.form {
+  grid-template-columns: auto;
+  grid-template-rows: 1vh 140vh;
+  margin-bottom: -70px;
+  width: 100%;
+  display: grid;
+}
+
+.svg {
+  position: relative;
+  transform: scaleY(0.75);
+  margin-top: -90px;
+}
+
+#container {
+  display: flex;
+  width: 75vw;
+  border-radius: 14px;
+  overflow: hidden;
+  padding: 10px;
+  margin-top: 20px;
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 33px 0px rgba(0, 0, 0, 0.75);
+  z-index: 3;
+}
+
+.contactInfo {
+  display: flex;
+  flex: 0 1 40%;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 35px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.75);
+  box-shadow: 0 10px 23px 0px rgba(0, 0, 0, 0.75);
+}
+
+.contactInfo h4 {
+  font-size: 140%;
+  font-weight: 600;
+  margin-bottom: 8%;
+  color: #848788;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 1);
+}
+
+.contactInfo p {
+  font-size: 90%;
+  font-weight: 600;
+  margin-bottom: 25%;
+  color: #d4d9dd;
+  text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+.icons {
+  margin-right: 7%;
+  height: 18px;
+}
+
+.iconText {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 15%;
+}
+
+.iconText span {
+  font-size: 80%;
+  font-weight: 600;
+  color: #d4d9dd;
+  text-shadow: 0px 1px 6px rgba(0, 0, 0, 1);
+}
+
+.days {
+  display: inline-block;
+  width: 110px;
+}
+
+/* Form styles */
+
+#container form {
+  padding: 20px;
+  width: 100%;
+}
+
+.formCol {
+  display: flex;
+  width: 100%;
+  flex: 0 0 100%;
+  margin-bottom: 8%;
+}
+
+.formField {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex: 0 1 100%;
+  padding-right: 5%;
+}
+
+.formField label {
+  position: relative;
+  color: rgba(255, 255, 255, 0.6);
+  border: 0;
+  margin-bottom: 3%;
+}
+
+.formField label::after {
+  border: 0;
+}
+
+.formField input,
+textarea {
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 8px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  font-weight: 400;
+  font-size: 80%;
+  color: #f9f9f9;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.formField input[type="tel"] {
+  height: 56px !important;
+  width: 100% !important;
+  border: 1px solid #e0e2e3 !important;
+  background: transparent;
+  font-size: 16px !important;
+}
+
+.invisible {
+  display: none;
+}
+
+textarea {
+  height: 50px;
+  padding: 0 0 8px 0;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  resize: none;
+}
+
+textarea::placeholder {
+  color: #f9f9f9;
+  opacity: 0.6;
+}
+
+.formField input:valid,
+textarea:not(:placeholder-shown) {
+  border-bottom: 2px solid #108690;
+}
+
+/* Submit button */
+
+.submitBtn {
+  width: 200px;
+  height: 45px;
+  font-size: 80%;
+  font-weight: 700;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s, color 0.5s, opacity 0.3s;
+  cursor: pointer;
+}
+
+.submitBtn:disabled {
+  opacity: 0.5;
+  color: #108690;
+  border: 2px solid #108690;
+}
+
+.submitBtn:enabled {
+  opacity: 0.8;
+  background-color: #108690;
+  color: #f9f9f9;
+}
+
+#submitField {
+  align-items: flex-end;
+}
+
+/* Grid columns */
+
+.col2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.52)),
+    url(../../../images/scott-webb-oRWRlTgBrPo-unsplash-1200x800.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (min-width: 1400px) {
+  #container {
+    width: 85vw;
+  }
+
+  .svg {
+    margin-top: -140px;
+  }
+
+  .contactInfo h4 {
+    font-size: 35px;
+  }
+
+  .contactInfo p {
+    font-size: 26px;
+  }
+
+  .icons {
+    height: 25px;
+  }
+
+  .iconText span {
+    font-size: 22px;
+  }
+
+  .formField input,
+  textarea {
+    font-size: 20px;
+  }
+
+  .submitBtn {
+    width: 300px;
+    height: 65px;
+  }
+}
+
+@media only screen and (max-width: 1400px) and (min-height: 1000px) and (orientation: landscape) {
+  .form {
+    grid-template-rows: 0vh 100vh;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #container {
+    width: 85vw;
+    margin-top: -90px;
+  }
+
+  .svg {
+    margin-top: -80px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #container {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .contactInfo {
+    flex-direction: column;
+    height: 200px;
+  }
+
+  .contactInfo h4 {
+    width: 100%;
+    font-size: 140%;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .contactInfo p {
+    font-size: 90%;
+    margin-bottom: 10px;
+  }
+
+  .iconText {
+    margin-bottom: 0;
+    width: 50%;
+  }
+
+  .block {
+    display: flex;
+    margin-top: 15px;
+  }
+
+  .rightBlock {
+    margin-left: 80px;
+  }
+
+  .formCol:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 900px) and (min-height: 1024px) and (orientation: portrait) {
+  #container {
+    flex-direction: column;
+    margin-top: 0px;
+  }
+
+  .form {
+    grid-template-rows: 0vh 80vh;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (max-height: 1024px) {
+  #container {
+    flex-direction: column;
+    margin-top: 0px;
+  }
+
+  .form {
+    grid-template-rows: 0vh 170vh;
+  }
+
+  .svg {
+    margin-top: -60px;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-height: 800px) {
+  #container {
+    flex-direction: column;
+    margin-top: 0px;
+  }
+
+  .form {
+    grid-template-rows: 0vh 100vh;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .rightBlock {
+    margin-left: 20px;
+  }
+
+  .svg {
+    margin-top: -30px;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .contactInfo {
+    height: 340px;
+  }
+
+  .iconText {
+    width: 90%;
+  }
+
+  .block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rightBlock {
+    margin-top: 15px;
+    margin-left: 0px;
+  }
+
+  .formCol {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .formField {
+    margin-bottom: 25px;
+  }
+
+  .formField label {
+    margin-bottom: 10px;
+  }
+
+  .formField input,
+  textarea {
+    padding-top: 0px;
+  }
+
+  #submitField {
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .svg {
+    margin-top: -20px;
+  }
+
+  .col2 {
+    background: #e8e7e3;
+    padding-top: 40px;
+  }
+
+  .form {
+    grid-template-rows: 0vh 1040px;
+    margin-bottom: 0px;
+  }
+
+  #container {
+    width: 90vw;
+    border-radius: 30px;
+    border: none;
+    padding: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.52)),
+      url(../../../images/scott-webb-oRWRlTgBrPo-unsplash-1200x800.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #container form {
+    backdrop-filter: blur(14px);
+  }
+
+  .contactInfo {
+    backdrop-filter: blur(6px);
+  }
+
+  .contactInfo {
+    border-radius: 0px;
+    padding: 15px;
+    height: 370px;
+  }
+
+  .days {
+    width: 80px;
+  }
+
+  .iconText span {
+    font-size: 70%;
+  }
+
+  .form:focus-within {
+    grid-template-rows: 0vh 1240px;
+  }
+
+  .formField input[type="tel"] {
+    padding-top: 10px;
+  }
+}

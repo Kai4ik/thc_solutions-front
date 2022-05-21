@@ -1,0 +1,350 @@
+.wishlist {
+  background: white;
+}
+
+.wishlistHeader {
+  background-image: url("../../images/water-soluble-cbd-removebg-preview.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-color: #ebe8e5;
+  height: 200px;
+  width: 100vw;
+  padding-top: 80px;
+  padding-left: 90px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.wishlistHeader h3 {
+  font-size: 40px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.wishlistHeader p {
+  font-size: 24px;
+  color: rgba(112, 112, 112, 0.959);
+  font-family: "Roboto Mono", monospace;
+}
+
+/* Products container - 3 in a row */
+
+.products {
+  width: 1100px;
+  display: flex;
+  margin: 0 3vw;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Product card */
+
+.product {
+  display: flex;
+  flex-direction: column;
+  width: 31%;
+  height: 390px;
+  margin-right: 2%;
+  margin-bottom: 80px;
+  transition: 0.4s ease-out;
+  box-shadow: 8px 12px 12px #888888, -5px -10px 12px #888888;
+  user-select: none;
+}
+
+/* Styles happening after card was hovered */
+
+.product:hover {
+  transform: translateY(-30px);
+}
+
+.product:hover .productDetails {
+  background-color: #ffd52cde;
+}
+
+.product:hover .shopIcons,
+.product:hover .price {
+  background-color: rgba(235, 235, 235, 0.938);
+}
+
+/* Image container */
+
+.productImgWrapper {
+  display: flex;
+  min-height: 250px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #fff;
+}
+
+/* Actual image styles */
+
+.productImage {
+  max-width: 55%;
+  max-height: 40vh;
+  transition: 0.3s linear;
+}
+
+/* Product title styles */
+
+.productDetails {
+  min-height: 120px;
+  font-size: 14px;
+  padding: 20px 20px 0 20px;
+  margin-top: -20px;
+  position: relative;
+  background-color: #ebebeb;
+  color: black;
+  transition: 0.3s linear;
+  box-shadow: 0px -7px 10px #c1c0c0;
+}
+
+/* Login banner */
+
+.loginBanner {
+  position: absolute;
+  display: inline;
+  top: 300px;
+  right: 2vw;
+  width: 300px;
+  height: 240px;
+  padding: 25px;
+  font-size: 17px;
+  background-color: #ebebeb;
+  box-shadow: 8px 12px 12px #888888, -5px -10px 12px #888888;
+}
+
+.loginBanner i {
+  color: black;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.appeal {
+  font-size: 28px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  margin-bottom: 10px;
+}
+
+.regLinks {
+  margin: 0 -6px;
+  margin-top: 20px;
+}
+
+.regLinks button {
+  width: 120px;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 10px;
+  border: none;
+  border: 2px solid #108690;
+  color: #108690;
+  cursor: pointer;
+}
+
+.login {
+  float: right;
+  color: white !important;
+  background-color: #108690;
+}
+
+/* Media queries */
+
+@media only screen and (min-width: 1900px) {
+  .products {
+    width: 75vw;
+  }
+
+  .productImgWrapper {
+    min-height: 330px;
+  }
+
+  .product {
+    height: 500px;
+  }
+
+  .productDetails {
+    min-height: 150px;
+    font-size: 20px;
+  }
+
+  .wishlistHeader {
+    height: 240px;
+    padding-top: 100px;
+  }
+}
+
+@media only screen and (min-width: 1600px) and (max-width: 1900px) {
+  .products {
+    width: 75vw;
+  }
+
+  .product {
+    height: 420px;
+  }
+
+  .productImgWrapper {
+    min-height: 280px;
+  }
+
+  .wishlistHeader {
+    height: 240px;
+    padding-top: 100px;
+  }
+}
+
+@media only screen and (max-width: 1470px) {
+  .loginBanner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    top: -60px;
+    right: 0;
+    margin-bottom: 20px;
+    width: 100vw;
+    height: 60px;
+    padding: 25px;
+    padding-left: 3vw;
+    background: none;
+    box-shadow: none;
+  }
+
+  .loginBanner p {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .appeal {
+    margin-right: 10px;
+    margin-bottom: 0px;
+    font-weight: 400;
+    font-size: 18px;
+    text-shadow: none;
+  }
+
+  .regLinks {
+    display: none;
+  }
+
+  .products {
+    width: 92vw;
+    margin: 0 5vw;
+  }
+
+  .product {
+    width: 31% !important;
+  }
+}
+
+@media only screen and (max-width: 1270px) {
+  .wishlistHeader {
+    padding-left: 40px;
+    padding-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .products {
+    width: 92vw;
+    justify-content: flex-start;
+    column-gap: 3vw;
+    margin: 0 4vw;
+    margin-top: -40px;
+  }
+
+  .product {
+    width: 31% !important;
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .wishlistHeader {
+    padding: 20px 30px 0 30px;
+  }
+
+  .wishlistHeader h3 {
+    font-size: 40px !important;
+  }
+
+  .products {
+    margin: 0 6vw;
+    margin-top: -30px;
+  }
+
+  .product {
+    width: 46% !important;
+  }
+
+  .loginBanner {
+    display: inline;
+  }
+
+  .loginBanner p {
+    margin-left: 40px;
+  }
+
+  .appeal {
+    margin-left: 40px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .wishlistHeader {
+    padding: 20px 0 0 20px;
+    align-items: flex-start;
+    background-position-x: 5px;
+  }
+
+  .wishlistHeader h3 {
+    font-size: 40px !important;
+  }
+
+  .loginBanner {
+    display: inline-block;
+    top: -75px;
+  }
+
+  .products {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 4vw;
+  }
+
+  .product {
+    width: 400px !important;
+    margin-right: 0 !important;
+  }
+
+  .productImage {
+    width: 65% !important;
+    max-height: 50vh;
+  }
+
+  .loginBanner p {
+    margin-left: 10px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .wishlistHeader h3 {
+    font-size: 30px !important;
+  }
+
+  .product {
+    width: 85vw !important;
+  }
+
+  .productImage {
+    width: 55% !important;
+    max-height: 40vh;
+  }
+}

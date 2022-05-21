@@ -1,0 +1,377 @@
+.productWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+/* Active image and slides container */
+
+.allImages {
+  width: 800px;
+}
+
+/* Active image container */
+
+.imgWrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 180px;
+}
+
+.imgWrapper img {
+  width: 30vw;
+  max-height: 50vh;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+/* Slides with other images */
+
+.slides {
+  display: flex;
+  justify-content: center;
+  grid-gap: 20px;
+  margin-top: -150px;
+  user-select: none;
+}
+
+.slides a {
+  border: 2px solid #108690;
+  width: 90px;
+  height: 70px;
+}
+
+.slides a img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: white;
+}
+
+/* Styles for modal window */
+
+.modal {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease-out;
+  user-select: none;
+}
+
+.fullImage {
+  position: absolute;
+  max-width: 80%;
+  max-height: 50%;
+  object-fit: contain;
+  top: 50%;
+  left: 50%;
+  transition: all 0.25s ease-out;
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+.modal.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.fullImage.open {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Right side - description, title, category*/
+
+.descriptionWrapper {
+  width: 50%;
+  padding: 70px;
+  padding-top: 100px;
+}
+
+.descriptionWrapper h2 {
+  font-size: 23px;
+  font-weight: 800;
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+}
+
+.category {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: rgba(112, 112, 112, 0.959);
+  font-family: "Poppins", sans-serif;
+}
+
+.category p {
+  width: 70%;
+}
+
+.category div {
+  display: inline;
+  font-size: 18px;
+  font-weight: 600;
+  float: right;
+  margin-right: 50px;
+}
+
+.description {
+  margin: 30px 0;
+  line-height: 25px;
+  font-size: 16px;
+  padding-right: 40px;
+  text-align: justify;
+}
+
+/* Options styles */
+
+.options {
+  margin-top: 40px;
+}
+
+.options p {
+  font-size: 20px;
+  font-weight: 800;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+}
+
+.options:last-child {
+  border-bottom: 2px solid #d9d9d9;
+}
+
+.option {
+  display: flex;
+  border-top: 2px solid #d9d9d9;
+  font-size: 16px;
+  color: rgba(112, 112, 112, 0.959);
+  font-family: "Poppins", sans-serif;
+  padding: 10px 0;
+}
+
+.selectOption {
+  width: auto;
+}
+
+.optionRadio {
+  width: 5%;
+}
+
+.optionTitle {
+  width: 70%;
+}
+
+.optionPrice {
+  margin-left: 70px;
+}
+
+@media only screen and (min-width: 1800px) {
+  .imgWrapper {
+    height: 60vh;
+    padding-left: 120px;
+  }
+
+  .slides a {
+    width: 140px;
+    height: 100px;
+  }
+
+  .slides {
+    margin-top: 0px;
+  }
+
+  .descriptionWrapper {
+    padding-left: 140px;
+  }
+
+  .descriptionWrapper h2 {
+    font-size: 30px;
+  }
+
+  .category {
+    font-size: 25px;
+  }
+
+  .category div {
+    font-size: 25px;
+  }
+
+  .description {
+    font-size: 20px;
+    line-height: 30px;
+    padding-right: 0px;
+  }
+}
+
+@media only screen and (max-width: 1320px) {
+  .productWrapper {
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .allImages {
+    width: 580px;
+    padding-top: 20vh;
+  }
+
+  .imgWrapper {
+    height: 60vh;
+    justify-content: center;
+    padding-left: 0px;
+  }
+
+  .slides {
+    margin-top: -30px;
+  }
+
+  .slides a {
+    width: 100px;
+  }
+
+  .descriptionWrapper {
+    padding: 90px 10px 0 50px;
+  }
+
+  .optionPrice {
+    margin-left: 90px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .productWrapper {
+    flex-direction: column;
+  }
+
+  .allImages {
+    width: 100vw;
+    margin-top: 140px;
+    padding-top: 0;
+  }
+
+  .imgWrapper {
+    height: 45vh;
+  }
+
+  .imgWrapper img {
+    width: 60vw;
+  }
+
+  .slides {
+    grid-gap: 10px;
+    margin: 30px 10px 0 10px;
+  }
+
+  .slides a {
+    width: 10vw;
+  }
+
+  .fullImage {
+    max-height: 50%;
+  }
+
+  .descriptionWrapper {
+    width: 100vw;
+    padding: 0 50px 30px 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cardHeader {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+  }
+
+  .descriptionWrapper h2 {
+    font-size: 22px;
+    font-weight: 400;
+    padding-right: 10px;
+  }
+
+  .category {
+    width: 90vw;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .category div {
+    font-size: 14px;
+    color: black;
+  }
+
+  .description {
+    padding-right: 0px;
+  }
+
+  .option {
+    font-size: 18px;
+  }
+
+  .optionTitle {
+    width: 90%;
+  }
+
+  .optionPrice {
+    margin-left: 50px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .cardHeader {
+    left: 20px;
+  }
+
+  .descriptionWrapper {
+    padding: 0 50px 30px 30px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .option {
+    font-size: 15px;
+  }
+
+  .slides a {
+    width: 15vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .optionRadio {
+    width: 15%;
+  }
+
+  .cardHeader h2 {
+    padding-right: 50px;
+  }
+
+  .imgWrapper img {
+    max-height: 37vh;
+  }
+
+  .slides {
+    margin: 10px 10px 0 10px;
+  }
+
+  .slides a {
+    height: 70px;
+  }
+
+  .option {
+    font-size: 13px;
+  }
+
+  .descriptionWrapper {
+    padding: 0 30px 30px 30px;
+  }
+}

@@ -1,0 +1,71 @@
+.wishlist {
+  position: absolute;
+  top: 12px;
+  right: 45px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.inWishlist {
+  color: red;
+}
+
+.delete {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 2300px) {
+  .wishlist {
+    top: 19px;
+    right: 60px;
+    font-size: 18px;
+  }
+
+  .delete {
+    top: 15px;
+    right: 25px;
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .wishlist {
+    top: 15px;
+    right: 45px;
+  }
+
+  .delete {
+    top: 14px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .wishlist {
+    top: 19px;
+    right: 50px;
+    font-size: 16px;
+  }
+
+  .delete {
+    top: 16px;
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .wishlist {
+    top: -201px;
+    right: 40px;
+    font-size: 14px;
+  }
+
+  .delete {
+    top: -203px;
+    right: 15px;
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,134 @@
+/* Buttons container */
+
+.buttons {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+/* Price styles */
+
+.price {
+  position: absolute;
+  right: 20px;
+  top: 11px;
+  font-size: 90%;
+  color: black;
+  background-color: #ffd52cde;
+  width: 109px;
+  height: 42px;
+  font-weight: 600;
+  text-align: center;
+  padding: 12px;
+  border-radius: 40px;
+  box-shadow: inset -2px -2px 8px white,
+    inset -2px -2px 12px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+    inset 2px 2px 8px rgba(0, 0, 0, 0.15);
+  transition: 0.4s;
+  cursor: default;
+}
+
+/* Remove and add to cart buttons */
+
+.shopIcons {
+  position: relative;
+  display: inline-block;
+  left: 15px;
+  top: 10px;
+  font-size: 14px;
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 50%;
+  box-shadow: inset -2px -2px 8px white,
+    inset -2px -2px 12px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+    inset 2px 2px 8px rgba(0, 0, 0, 0.15);
+  transition: 0.4s;
+  overflow: hidden;
+  background-color: #ffd52cde;
+  color: black;
+  user-select: none;
+}
+
+.shopIcons:hover {
+  box-shadow: inset -2px -2px 8px white,
+    inset -2px -2px 12px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+    inset 2px 2px 8px rgba(0, 0, 0, 0.15);
+  color: #0d737a;
+}
+
+#shopCart {
+  top: 10px;
+}
+
+/* styles to image of product was added to cart */
+
+#addedToCart {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 11px;
+  right: 50px;
+  transition: 2s;
+}
+
+/* Styles for cart icon */
+
+#cartAnimation {
+  position: absolute;
+  top: 14px;
+  left: 11px;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+/* Styles when "Add to cart" button was clicked */
+
+.added #addedToCart {
+  animation: addedToCart linear forwards;
+  animation-duration: 2s;
+}
+
+.added #cartAnimation {
+  animation: cart 1.5s ease-in-out forwards;
+}
+
+/* If product is already in shopping cart */
+
+.inCartProduct {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 12px;
+  right: 0px;
+  left: 11px;
+  transition: 0.8s;
+  cursor: default;
+}
+
+/* Animation styles for adding to cart */
+
+@keyframes cart {
+  0% {
+    left: 11px;
+  }
+  100% {
+    left: 60px;
+  }
+}
+
+@keyframes addedToCart {
+  0% {
+    right: 60px;
+  }
+  100% {
+    right: 0px;
+    left: 10px;
+  }
+}
